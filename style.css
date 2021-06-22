@@ -1,0 +1,218 @@
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --Platinum: #e5e5e5ff;
+
+    --Headings: 'Open Sans', sans-serif;
+    --Body: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: var(--Violet);
+    color: var(--Platinum);
+    font-family: var(--Body);
+    font-weight: 400;
+}
+
+
+
+body .main .container .mockup img{
+    width: 100%;
+}
+
+body .main .description .text-description h1{
+    font-family: var(--Headings);
+    font-weight: 600;
+    }    
+
+body .main .description .text-description .register-btn{
+    padding: 1em;
+    width: 12em;
+    border: none;
+    border-radius: 20px;
+    background: var(--Platinum);
+    color: var(--Violet);
+    cursor: pointer;
+    transition: .5s;
+}
+
+body .main .description .text-description .register-btn:hover{
+    background: var(--Soft-Magenta);
+    color: var(--Platinum);
+}
+
+body .main .description .socia-media-icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 1em;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--Platinum);
+    text-decoration: none;
+    transition: .5s;
+    color: var(--Platinum);
+}
+
+body .main .description .socia-media-icons a:hover{
+    border: 1px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em 2em;
+}
+
+footer a{
+    color: var(--Platinum);
+}
+
+
+/*mobile*/
+@media (min-width: 320px) and (max-width: 768px){
+    body .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body .main .container{
+        background: no-repeat center/cover url(./images/bg-mobile.svg);
+        padding: 1em 2em;
+    }
+
+    body .main .container .logo img{
+        width: 12em;
+    }
+
+    body .main .container .mockup{
+        width: 100%;
+        margin: 4em 0;
+    }
+
+    /* body .main .container .mockup img{
+        width: 100%;
+    } */
+
+    body .main .description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 3em;
+    }
+
+    body .main .description .text-description h1{
+        /* font-family: var(--Headings);
+        font-weight: 600; */
+        margin-bottom: 1.5em;
+    }
+
+    body .main .description .text-description p{
+        margin-bottom: 1.5em;
+        padding: 0 1em;
+    }
+
+    /* body .main .description .text-description .register-btn{
+        padding: 1em;
+        width: 12em;
+        border: none;
+        border-radius: 20px;
+        background: var(--Platinum);
+        color: var(--Violet);
+        cursor: pointer;
+        transition: .5s;
+    } */
+
+    /* body .main .description .text-description .register-btn:hover{
+        background: var(--Soft-Magenta);
+        color: var(--Platinum);
+    } */
+
+    body .main .description .socia-media-icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 2em 0;
+    }
+
+    body .main .description .socia-media-icons a{
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        /*color: var(--Platinum);*/
+        margin: 1em;
+        /* border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--Platinum);
+        text-decoration: none;
+        transition: .5s; */
+    }
+
+    /* body .main .description .socia-media-icons a:hover{
+        border: 1px solid var(--Soft-Magenta);
+        color: var(--Soft-Magenta);
+    } */
+
+}
+
+
+/*desktop*/
+@media (min-width: 769px){
+    body .main{
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        background: no-repeat center/cover url(./images/bg-desktop.svg);
+    }
+
+    body .main .container{
+        height: 100%;
+        width: 50%;
+        padding: 4em 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    body .main .description{
+        width: 50%;
+        height: 100%;
+        padding: 4em 2em;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body .main .description .text-description{
+        margin-top: 10em;
+    }
+
+    body .main .description .text-description p{
+        margin: 1.5em 0;
+    }
+
+    body .main .description .socia-media-icons{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
